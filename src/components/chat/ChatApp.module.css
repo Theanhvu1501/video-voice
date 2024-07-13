@@ -1,0 +1,16 @@
+.animatedImage {
+  animation: slideDown 2s ease;
+}
+
+.animatedAvatar {
+  animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
