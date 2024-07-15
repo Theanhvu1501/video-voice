@@ -1,42 +1,50 @@
 import json
-import io
-import base64
+import os
 from bark import SAMPLE_RATE, generate_audio, preload_models
 from scipy.io.wavfile import write as write_wav
 
-# Tải và load tất cả các model
+# Set environment variables for Bark
+os.environ["SUNO_OFFLOAD_CPU"] = "True"
+os.environ["SUNO_USE_SMALL_MODELS"] = "True"
+
+# Load all models
 preload_models()
 
-# Dữ liệu đầu vào
+# Input data
 json_file = './chat_data.json'
 with open(json_file, 'r', encoding='utf-8') as f:
     chatData = json.load(f)
 
-# Lặp qua từng phần tử trong chatData
+# Create a directory for audio files if it doesn't exist
+audio_dir = 'audio_files'
+os.makedirs(audio_dir, exist_ok=True)
+
+# Iterate over each item in chatData
 for index, data in enumerate(chatData):
-    # Lấy nội dung text từ từ điển
+    # Get text content from the dictionary
     text_prompt = data["text"]
     speaker = data["speaker"]
     sex = data["sex"]
-    # Chọn giọng nói
+    
+    # Select voice preset based on sex
     if sex == "MALE":
-        voice_preset = "v2/ko_speaker_1"
+        voice_preset = "v2/ko_speaker_6"
     else:
         voice_preset = "v2/ko_speaker_0"
     
-    # Tạo âm thanh từ văn bản
+    # Generate audio from text
     audio_array = generate_audio(text_prompt, voice_preset)
     
-    bytes_io = io.BytesIO()
-    write_wav(bytes_io, SAMPLE_RATE, audio_array)
-    bytes_io.seek(0)  # Đặt con trỏ về đầu file
-    audio_base64 = base64.b64encode(bytes_io.read()).decode('utf-8')
+    # Define the path for the audio file
+    audio_filename = f'{audio_dir}/audio_{index}.wav'
+    
+    # Save the audio to a WAV file
+    write_wav(audio_filename, SAMPLE_RATE, audio_array)
+    
+    # Update the JSON data with the path to the audio file
+    data["audioFile"] = audio_filename
 
-    # Thêm base64 vào mục data của từng mục trong chatData
-    data["voiceBase64"] = audio_base64
-
-
-# Ghi chatData vào file JSON
+# Write updated chatData to the JSON file
 with open('chat_data.json', 'w', encoding='utf-8') as f:
     json.dump(chatData, f, ensure_ascii=False, indent=4)
 

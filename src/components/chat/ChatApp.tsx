@@ -6,6 +6,7 @@ import bgVideo from "../../asset/bg.mp4";
 import imgHeader from "../../asset/header.png";
 import { SexType } from "../../constants";
 import styles from "./ChatApp.module.css";
+import audioUrl from '../../../audio_files/audio_0.wav'
 
 interface ChatMessage {
   speaker: string;
@@ -14,7 +15,7 @@ interface ChatMessage {
   timestamp: string;
   avatar?: string;
   voiceBase64?: string;
-  
+  audioFile?:string;
 }
 
 interface ChatAppProps {
@@ -54,11 +55,11 @@ const ChatApp: React.FC<ChatAppProps> = ({ chatData }) => {
           }
           return updatedMessages;
         });
-        if (currentMessage.voiceBase64) {
+        if (currentMessage.audioFile) {
           const audio = new Audio(
-            `data:audio/wav;base64,${currentMessage.voiceBase64}`
+            `../../../${currentMessage.audioFile}`
           );
-          audio.play();
+          audio.play().catch(error => console.error('Error playing audio:', error));;
           audio.onended = () => {
             setCurrentIndex((prevIndex) => prevIndex + 1);
           };
@@ -125,7 +126,7 @@ const ChatApp: React.FC<ChatAppProps> = ({ chatData }) => {
         <div className=" mb-4 p-4">
           {messages.map((msg, index) => (
             <div
-              key={index}
+              key={msg.timestamp} 
               className={`flex ${
                 msg.speaker === "User" ? "justify-end" : "justify-start"
               } mb-4`}
