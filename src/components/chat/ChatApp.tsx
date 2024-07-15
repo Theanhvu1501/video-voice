@@ -14,6 +14,7 @@ interface ChatMessage {
   timestamp: string;
   avatar?: string;
   voiceBase64?: string;
+  
 }
 
 interface ChatAppProps {
