@@ -1,0 +1,321 @@
+ [
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "엄마 나도 이제 장가가려고 오늘 프로포즈도 하고 왔지.",
+    "timestamp": "00:00:02:18"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "정말 축하한다.",
+    "timestamp": "00:00:08:31"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "우리 아들 현미라면 분명 좋은 아내, 좋은 엄마가 될 수 있을 거야.",
+    "timestamp": "00:00:10:08"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "잘 생각했어.",
+    "timestamp": "00:00:17:36"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "드디어 나도 시어머니가 되는거니.",
+    "timestamp": "00:00:20:24"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "현미하고 라면 그 흔한 고부갈등 도 없이 평화롭게 잘 지낼 수 있을 것 같구나.",
+    "timestamp": "00:00:24:12"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "아니, 엄마, 잠깐만.",
+    "timestamp": "00:00:31:22"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "나현미랑 결혼하는 거 아냐?",
+    "timestamp": "00:00:33:55"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "개랑은 이미 사흘 전에 쪽냈어.",
+    "timestamp": "00:00:37:10"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "뭐, 그럼 누구랑 결혼한 다는 거야?",
+    "timestamp": "00:00:40:35"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "새로 만난 여자 있어?",
+    "timestamp": "00:00:44:24"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "어리고 예쁘고 착하고.",
+    "timestamp": "00:00:46:53"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "실물 보면 엄마도 분명 맘에 들어 할 거야.",
+    "timestamp": "00:00:48:03"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "비록 만난지 석달 밖에 안 됐지만 우린 그냥 운명이야.",
+    "timestamp": "00:00:51:34"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "맺을 수 밖에 없는 하늘이 정해준 인연.",
+    "timestamp": "00:00:56:22"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "뭐야?",
+    "timestamp": "00:01:00:05"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "너 양 다리 걸치고 다녔니?",
+    "timestamp": "00:01:00:52"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "아니, 엄마.",
+    "timestamp": "00:01:03:43"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "양다리가 아니라 누가 나한테 더 어울리는 여자인지 신중하게 고려하는 단계를 거친거지.",
+    "timestamp": "00:01:05:43"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "내 아들이지만 정말 최악이다.",
+    "timestamp": "00:01:14:22"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "너 7년이나 만난 여자한테 어떻게 그럴 수 있니?",
+    "timestamp": "00:01:16:28"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "너한텐 의리도 예의란 것도 없니?",
+    "timestamp": "00:01:22:10"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "양다리 걸치다가 프로포즈에 성공하니까 그제야 오한이 어치를 버려.",
+    "timestamp": "00:01:25:31"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "내가 널 그렇게 가르쳤어.",
+    "timestamp": "00:01:30:46"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "아니, 엄마 왜 팔이 바깥으로 굳고 그래?",
+    "timestamp": "00:01:33:45"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "엄마는 아들인 내 행복보다 남은 염미가 더 소중하단 거야.",
+    "timestamp": "00:01:37:06"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "난 현빈암으로 생각한 적 없어.",
+    "timestamp": "00:01:41:33"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "너한테도 나랑 니 아빠한테도 최선을 다한 착한 해야.",
+    "timestamp": "00:01:45:01"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "무조건 내 며느리가 될 줄 알았고, 한 치의 의심도 없이 가족으로 생각했어.",
+    "timestamp": "00:01:49:42"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "너 취준생 일 때도 용돈 대주면서 만나줬고,",
+    "timestamp": "00:01:55:30"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "너 군대가있을 때 암 투병하던 내 간병도 해준 착한 아이였어.",
+    "timestamp": "00:01:59:45"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "그런 애를 버리고 석달 만난 여자랑 결혼을 하겠다고?",
+    "timestamp": "00:02:05:07"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "현미착한 여자인 줄 나도 잘 알아.",
+    "timestamp": "00:02:11:24"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "근데 정만으로 결혼할 순 없잖아.",
+    "timestamp": "00:02:14:45"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "결혼은 타이밍이라고 하잖아.",
+    "timestamp": "00:02:17:58"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "내가 결혼하고 싶을 때 꼭 내 맘에 드는 여자를 만나게 됐고,",
+    "timestamp": "00:02:21:01"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "그 여자랑 나머지 인생 함께하고 싶어져서.",
+    "timestamp": "00:02:25:53"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "사랑이 죄는 아니잖아.",
+    "timestamp": "00:02:30:00"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "어좀 현미한테는 다행이 겠다.",
+    "timestamp": "00:02:32:40"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "너 같은 놈이랑 헤어지고 더 좋은 사람 만나서 결혼할 기회를 얻게 돼서.",
+    "timestamp": "00:02:35:58"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "너한테는 너무 아까운 아가씨거든.",
+    "timestamp": "00:02:41:27"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "아니, 엄마는 왜 자꾸 현미편을 들고 그래?",
+    "timestamp": "00:02:45:07"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "엄마 아들은 나야.",
+    "timestamp": "00:02:48:45"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "나.",
+    "timestamp": "00:02:49:48"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "엄마는 내가 행복하길 말해야 하는 거 아니야?",
+    "timestamp": "00:02:51:19"
+  },
+  {
+    "speaker": "User",
+    "sex": "MALE",
+    "text": "내가 운명적인 여자를 만나서 행복하다는 데 응원의 줘야 하는 거 아니냐고.",
+    "timestamp": "00:02:54:48"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "그래, 부디 그 마음 변치 말고 쭉 행복할 수 있으면 좋겠다.",
+    "timestamp": "00:03:00:09"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "니 인생이 니?",
+    "timestamp": "00:03:05:11"
+  },
+  {
+    "speaker": "Other",
+    "sex": "FEMALE",
+    "avatar": "https://noidia.b-cdn.net/thumbnails/726447699727.jpg",
+    "text": "니가 책임지고 살아.",
+    "timestamp": "00:03:06:18"
+  },
+];
