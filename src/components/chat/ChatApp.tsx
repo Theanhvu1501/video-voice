@@ -1,22 +1,10 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MessageBox } from "react-chat-elements";
 import "react-chat-elements/dist/main.css";
-import { voiceService } from "../../api";
+import { ChatMessage } from "../../app/app";
 import bgVideo from "../../asset/bg.mp4";
 import imgHeader from "../../asset/header.png";
-import { SexType } from "../../constants";
 import styles from "./ChatApp.module.css";
-import audioUrl from '../../../audio_files/audio_0.wav'
-
-interface ChatMessage {
-  speaker: string;
-  text: string;
-  sex: SexType;
-  timestamp: string;
-  avatar?: string;
-  voiceBase64?: string;
-  audioFile?:string;
-}
 
 interface ChatAppProps {
   chatData: ChatMessage[];
@@ -27,7 +15,6 @@ const ChatApp: React.FC<ChatAppProps> = ({ chatData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const previousMessageRef = useRef<ChatMessage | null>(null);
   const [isMounted, setIsMounted] = useState(false);
-  const [hasUserInteracted, setHasUserInteracted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true); // Set isMounted to true when component mounts
@@ -39,12 +26,12 @@ const ChatApp: React.FC<ChatAppProps> = ({ chatData }) => {
 
   useEffect(() => {
     const displayMessages = async () => {
-      if (isMounted && currentIndex < chatData.length && hasUserInteracted) {
+      if (isMounted && currentIndex < chatData.length) {
         // Check if component is mounted before executing
         const currentMessage = chatData[currentIndex];
         if (currentIndex === 0) {
           // Delay for 2 seconds before displaying the first message
-          await new Promise((resolve) => setTimeout(resolve, 2000));
+          await new Promise((resolve) => setTimeout(resolve, 4000));
         }
         setMessages((prevMessages) => {
           const updatedMessages = [...prevMessages, currentMessage];
@@ -55,13 +42,15 @@ const ChatApp: React.FC<ChatAppProps> = ({ chatData }) => {
           }
           return updatedMessages;
         });
-        if (currentMessage.audioFile) {
+        if (currentMessage.voiceBase64) {
           const audio = new Audio(
-            `../../../${currentMessage.audioFile}`
+            `data:audio/wav;base64,${currentMessage.voiceBase64}`
           );
-          audio.play().catch(error => console.error('Error playing audio:', error));;
+          audio.play();
           audio.onended = () => {
-            setCurrentIndex((prevIndex) => prevIndex + 1);
+            setTimeout(() => {
+              setCurrentIndex((prevIndex) => prevIndex + 1);
+            }, 500);
           };
         }
         previousMessageRef.current = currentMessage;
@@ -69,37 +58,11 @@ const ChatApp: React.FC<ChatAppProps> = ({ chatData }) => {
     };
 
     displayMessages();
-  }, [currentIndex, chatData, isMounted, hasUserInteracted]);
+  }, [currentIndex, chatData, isMounted]);
 
-  const loadVoice = useCallback(async () => {
-    const voices = await Promise.all(
-      chatData.map((voice) => {
-        return voiceService.getVoiceBase64(voice.text, voice.sex);
-      })
-    );
-    chatData.forEach((message, index) => {
-      message.voiceBase64 = voices[index];
-    });
-  }, [chatData]);
-
-  return !hasUserInteracted ? (
-    <>
-      <button
-        onClick={() => setHasUserInteracted(true)}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-      >
-        Start Chat
-      </button>
-      <button
-        onClick={loadVoice}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-      >
-        LoadVoice
-      </button>
-    </>
-  ) : (
+  return (
     <div
-      className="relative  mx-auto border border-gray-300 shadow-lg overflow-hidden"
+      className="relative flex items-center justify-center  mx-auto border border-gray-300 shadow-lg overflow-hidden"
       style={{
         height: 720,
         width: 1280,
@@ -124,19 +87,19 @@ const ChatApp: React.FC<ChatAppProps> = ({ chatData }) => {
       >
         <img src={imgHeader} className={styles.animatedImage} />
         <div className=" mb-4 p-4">
-          {messages.map((msg, index) => (
+          {messages.map((msg) => (
             <div
-              key={msg.timestamp} 
+              key={msg.timestamp}
               className={`flex ${
-                msg.speaker === "User" ? "justify-end" : "justify-start"
+                msg.speaker === "Speaker1" ? "justify-end" : "justify-start"
               } mb-4`}
             >
               <div
                 className={`flex ${
-                  msg.speaker === "User" ? "justify-end" : "justify-start"
+                  msg.speaker === "Speaker1" ? "justify-end" : "justify-start"
                 }`}
               >
-                {msg.speaker !== "User" && (
+                {msg.speaker !== "Speaker1" && (
                   <img
                     src={msg.avatar || ""}
                     alt="Avatar"
@@ -147,16 +110,17 @@ const ChatApp: React.FC<ChatAppProps> = ({ chatData }) => {
                   type="text"
                   text={msg?.text}
                   date={new Date(msg.timestamp)}
-                  position={msg.speaker === "User" ? "right" : "left"}
+                  position={msg.speaker === "Speaker1" ? "right" : "left"}
                   styles={{
-                    backgroundColor: msg.speaker === "User" ? "#4FDE53" : "",
+                    backgroundColor:
+                      msg.speaker === "Speaker1" ? "#FAE100" : "",
                     padding: 20,
-                    borderRadius: 50,
-                    borderTopLeftRadius: msg.speaker === "Other" ? 0 : 50,
-                    borderTopRightRadius: msg.speaker === "User" ? 0 : 50,
+                    borderRadius: 20,
+                    borderTopLeftRadius: msg.speaker === "Speaker1" ? 20 : 0,
+                    borderTopRightRadius: msg.speaker === "Speaker1" ? 0 : 20,
                   }}
                   notchStyle={{
-                    fill: msg.speaker === "User" ? "#4FDE53" : "",
+                    fill: msg.speaker === "Speaker1" ? "#FAE100" : "",
                   }}
                 />
               </div>

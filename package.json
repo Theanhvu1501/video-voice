@@ -39,8 +39,7 @@
     "build": "tsc && vite build",
     "test": "vitest",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "postinstall": "husky install"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@google-cloud/text-to-speech": "^5.3.0",
@@ -48,8 +47,10 @@
     "@types/axios": "^0.14.0",
     "@types/html2canvas": "^1.0.0",
     "@types/syllable": "^5.0.2",
+    "antd": "^5.19.3",
     "assemblyai": "^4.6.0",
     "axios": "^1.7.2",
+    "babel-plugin-preval": "^5.1.0",
     "html2canvas": "^1.4.1",
     "react": "18.2.0",
     "react-chat-elements": "^12.0.15",

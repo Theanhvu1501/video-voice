@@ -1,11 +1,8 @@
 import axios from "axios";
-import { SexType } from "../../constants";
 
 class VoiceService {
-  getVoiceBase64 = async (text: string, sex: SexType) => {
-    const apiKey: string = import.meta.env.VITE_GOOGLE_API_KEY;
+  getVoiceBase64 = async (text: string, name: string, apiKey: string) => {
     const url: string = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`;
-    const name = sex === SexType.FEMALE ? "ko-KR-Neural2-A" : "ko-KR-Neural2-C";
     const request = {
       input: { text: text },
       voice: {
